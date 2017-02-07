@@ -116,8 +116,11 @@ class Bitcoin {
         $this->response     = null;
 
         // If no parameters are passed, this will be an empty array
-        $params = array_values($params);
+        //$params = array_values($params);
 
+        // Modified for compatibility
+        $params = $params[0];
+        
         // The ID should be unique for each call
         $this->id++;
 
